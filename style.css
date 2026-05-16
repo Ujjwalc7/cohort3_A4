@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: signature;
+  src: url(./Amsterdam\ Handwriting.ttf);
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+header {
+  background-color: rgb(32, 32, 95);
+  width: 100%;
+  height: 10%;
+}
+
+section {
+  width: 100%;
+  height: 87.8%;
+  display: grid;
+  grid-template-rows: 25% 50% 25%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    "top top top top top"
+    "left leftcenter center rightcenter right"
+    "bottom bottom bottom bottom bottom";
+  padding-left: 80px;
+  padding-right: 80px;
+  gap: 10px;
+}
+.top {
+  grid-area: top;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.top span {
+  font-size: xx-large;
+  margin-top: 30px;
+}
+.top h1 {
+  text-align: center;
+  font-size: 5rem;
+}
+
+.left {
+  grid-area: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left h2 {
+}
+.left i {
+  font-size: 30px;
+}
+.left div {
+  width: 100%;
+  height: 40%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+  transform: scale(1.3);
+}
+.leftcenter {
+  grid-area: leftcenter;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.leftcenter img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  object-position: center 10%;
+}
+
+.leftcenter span{
+  position: absolute;
+  top: -5%;
+  font-size: 30px;
+}
+
+.leftcenter .img1 {
+  height: 35%;
+}
+
+.leftcenter .img2 {
+  height: 45%;
+  object-position: center 10%;
+}
+.center {
+  position: relative;
+  grid-area: center;
+}
+
+.center img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.rightcenter {
+  position: relative;
+  grid-area: rightcenter;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.rightcenter img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.rightcenter .img1 {
+  height: 45%;
+  object-position: center 15%;
+}
+.rightcenter .img2 {
+  height: 35%;
+  object-position: center 30%;
+}
+.right {
+  grid-area: right;
+  position: relative;
+}
+
+.right span{
+  font-size: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.right p{
+  font-weight: bold;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right img {
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+  object-position: center 10%;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.bottom {
+  grid-area: bottom;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottom .div1 .text {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.bottom .div1 .sig {
+  font-weight: bold;
+  font-family: signature;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: rgb(235, 235, 23);
+}
+
+.bottom .div2 button {
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid rgb(231, 231, 231);
+}
+
+.bottom .div2 span {
+  font-size: 3rem;
+}
+
+.bottom .div2 {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom .div2 i{
+  font-size: 30px;
+}
+
+.bottom .div3 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.bottom .div3 div .text {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.bottom .div3 div .text span {
+  font-size: 4rem;
+  font-weight: normal;
+}
+.bottom .div3 div .date {
+  font-size: 10px;
+  margin-left: 35%;
+}
+
+.bottom .div3 button {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
